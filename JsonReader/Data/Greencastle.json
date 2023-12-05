@@ -1,0 +1,28 @@
+{
+  "books": [
+    {
+      "title": "Journey to the Unknown",
+      "author": "Alex Johnson",
+      "year": 2018,
+      "description": "A captivating adventure novel exploring uncharted territories across the globe."
+    },
+    {
+      "title": "The Future of Technology",
+      "author": "Samantha Reed",
+      "year": 2021,
+      "description": "An insightful look into upcoming technological innovations and their potential impact on society."
+    },
+    {
+      "title": "Mysteries of the Ocean",
+      "author": "David Lee",
+      "year": 2016,
+      "description": "Exploring the deepest parts of the ocean, this book uncovers the secrets beneath the waves."
+    },
+    {
+      "title": "World of Wonders",
+      "author": "Sarah Parker",
+      "year": 2020,
+      "description": "A photographic journey through some of the most breathtaking landscapes around the world."
+    }
+  ]
+}

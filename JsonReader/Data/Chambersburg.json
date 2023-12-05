@@ -1,0 +1,28 @@
+{
+  "books": [
+    {
+      "title": "Secrets of the Ancient World",
+      "author": "Emily White",
+      "year": 2019,
+      "description": "Unveiling the mysteries of ancient civilizations and their lost technologies."
+    },
+    {
+      "title": "The Art of Innovation",
+      "author": "Michael Torres",
+      "year": 2022,
+      "description": "A deep dive into the world of creative thinking and groundbreaking inventions in the modern era."
+    },
+    {
+      "title": "Hidden in the Stars",
+      "author": "Richard Adams",
+      "year": 2017,
+      "description": "A thrilling cosmic journey exploring the vast expanse of the universe and its many secrets."
+    },
+    {
+      "title": "Echoes of the Rainforest",
+      "author": "Laura Gonzalez",
+      "year": 2021,
+      "description": "An exploration of the lush and diverse ecosystems of the world's rainforests and their ecological importance."
+    }
+  ]
+}
