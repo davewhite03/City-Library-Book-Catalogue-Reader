@@ -1,11 +1,11 @@
 ﻿using Newtonsoft.Json.Linq;
 using System.Text.Json;
 
-class Program
+public class Program
 {
     static void Main(string[] args)
     {
-        FileEnumeratorWrapper fileEnumeratorWrapper = new FileEnumeratorWrapper();
+        
 
         // Loop allows continuous running of the program
         while (true)
@@ -13,7 +13,7 @@ class Program
             Console.WriteLine("Which City library would you like to access? Type 'exit' to leave the program");
 
             // Prints out all library file names for user selection
-            fileEnumeratorWrapper.PrintAllFileNames();
+            FileEnumeratorWrapper.EnumerateFiles();
             string fileName = Console.ReadLine();
 
             // Retrieves the file path for the user's selected file
@@ -47,7 +47,7 @@ class Program
     }
 }
 
-class Book
+public class Book
 {
     public string Title { get; set; }
     public string Description { get; set; }
@@ -61,11 +61,12 @@ class Book
     }
 }
 
-class FileEnumeratorWrapper
+public class FileEnumeratorWrapper
 {
-    // Prints all file names in the Data directory
-    public void PrintAllFileNames()
+   static public void EnumerateFiles()
     {
+
+
         // Retrieves the path of the Data directory
         string currentDirectoy = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", ".."));
         string dataDirectoryPath = Path.Combine(currentDirectoy, "Data");
@@ -73,11 +74,7 @@ class FileEnumeratorWrapper
         try
         {
             IEnumerable<string> files = Directory.EnumerateFiles(dataDirectoryPath);
-            foreach (string file in files)
-            {
-                string fileName = Path.GetFileNameWithoutExtension(file);
-                Console.WriteLine($"- {fileName}");
-            }
+            PrintAllFileNames(files);
         }
         catch (DirectoryNotFoundException e)
         {
@@ -91,7 +88,30 @@ class FileEnumeratorWrapper
         {
             Console.WriteLine($"An unexpected error occurred: {e.Message}");
         }
+
     }
+
+
+    
+    // Prints all file names in the Data directory
+  static public void PrintAllFileNames(IEnumerable<string> files)
+    {
+        foreach (string file in files)
+        {
+            string fileName = Path.GetFileNameWithoutExtension(file);
+            Console.WriteLine($"- {fileName}");
+        }
+    }
+
+
+
+
+
+
+
+
+
+
 }
 
 class JsonParserWrapper
